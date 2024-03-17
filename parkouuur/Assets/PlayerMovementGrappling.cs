@@ -15,6 +15,7 @@ public class PlayerMovementGrappling : MonoBehaviour
     private float lastDesiredMoveSpeed;
     public float speedIncreaseMultiplier;
     public float slopeIncreaseMultiplier;
+    public float wallrunSpeed;
 
     public float groundDrag;
 
@@ -67,11 +68,13 @@ public class PlayerMovementGrappling : MonoBehaviour
         sprinting,
         sliding,
         crouching,
+        wallrunning,
         air
     }
 
     public bool freeze;
     public bool sliding;
+    public bool wallrunning;
 
     public bool activeGrapple;
     public bool swinging;
@@ -141,7 +144,12 @@ public class PlayerMovementGrappling : MonoBehaviour
     private void StateHandler()
     {
         
-        if(sliding)
+        if(wallrunning)
+        {
+            state = MovementState.wallrunning;
+            desiredMoveSpeed = wallrunSpeed;
+        }
+        else if(sliding)
         {
             state = MovementState.sliding;
             if(OnSlope() && rb.velocity.y  < 0.1f)

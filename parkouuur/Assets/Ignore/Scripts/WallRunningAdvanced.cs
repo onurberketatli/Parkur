@@ -12,7 +12,7 @@ public class WallRunningAdvanced : MonoBehaviour
     public float wallJumpSideForce;
     public float wallClimbSpeed;
     public float maxWallRunTime;
-    private float wallRunTimer;
+    public float wallRunTimer;
 
     [Header("Input")]
     public KeyCode jumpKey = KeyCode.Space;
@@ -43,14 +43,14 @@ public class WallRunningAdvanced : MonoBehaviour
     [Header("References")]
     public Transform orientation;
     public PlayerCam cam;
-    private PlayerMovementAdvanced pm;
+    private PlayerMovementGrappling pm;
     private LedgeGrabbing lg;
     private Rigidbody rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        pm = GetComponent<PlayerMovementAdvanced>();
+        pm = GetComponent<PlayerMovementGrappling>();
         lg = GetComponent<LedgeGrabbing>();
     }
 
