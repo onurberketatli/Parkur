@@ -40180,7 +40180,6 @@ MonoBehaviour:
     m_Bits: 1536
   grounded: 0
   maxSlopeAngle: 40
-  climbingScript: {fileID: 0}
   orientation: {fileID: 2070159565}
   state: 0
   sliding: 0
@@ -67760,6 +67759,7 @@ GameObject:
   - component: {fileID: 1623225834}
   - component: {fileID: 1623225836}
   - component: {fileID: 1623225837}
+  - component: {fileID: 1623225838}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -67904,6 +67904,8 @@ MonoBehaviour:
   speedIncreaseMultiplier: 8
   slopeIncreaseMultiplier: 8
   wallrunSpeed: 8
+  dashSpeed: 20
+  maxYSpeed: 0
   groundDrag: 4
   jumpForce: 12
   jumpCooldown: 0.25
@@ -67925,6 +67927,7 @@ MonoBehaviour:
   freeze: 0
   sliding: 0
   wallrunning: 0
+  dashing: 0
   activeGrapple: 0
   swinging: 0
   text_speed: {fileID: 2019819760}
@@ -68110,6 +68113,20 @@ MonoBehaviour:
   gravityCounterForce: 0.23
   orientation: {fileID: 1231071163}
   cam: {fileID: 1623225835}
+--- !u!114 &1623225838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623225821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689735a3e41b80644b32de79932c4bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 150
+  cam: {fileID: 963194227}
 --- !u!43 &1627895500
 Mesh:
   m_ObjectHideFlags: 0

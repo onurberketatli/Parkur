@@ -49,7 +49,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
     private bool exitingSlope;
 
     [Header("References")]
-    public Climbing climbingScript;
+    
     private ClimbingDone climbingScriptDone;
 
     public Transform orientation;
@@ -291,7 +291,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
 
     private void MovePlayer()
     {
-        if (climbingScript.exitingWall) return;
+        
         if (climbingScriptDone.exitingWall) return;
         if (restricted) return;
 

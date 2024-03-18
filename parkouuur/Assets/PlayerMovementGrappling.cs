@@ -16,6 +16,9 @@ public class PlayerMovementGrappling : MonoBehaviour
     public float speedIncreaseMultiplier;
     public float slopeIncreaseMultiplier;
     public float wallrunSpeed;
+    public float dashSpeed;
+    public float maxYSpeed;
+
 
     public float groundDrag;
 
@@ -59,6 +62,8 @@ public class PlayerMovementGrappling : MonoBehaviour
     Rigidbody rb;
 
     public MovementState state;
+    private MovementState lastState;
+    private bool keepMomentum;
     public enum MovementState
     {
         freeze,
@@ -69,12 +74,14 @@ public class PlayerMovementGrappling : MonoBehaviour
         sliding,
         crouching,
         wallrunning,
+        dashing,
         air
     }
 
     public bool freeze;
     public bool sliding;
     public bool wallrunning;
+    public bool dashing;
 
     public bool activeGrapple;
     public bool swinging;
@@ -140,11 +147,16 @@ public class PlayerMovementGrappling : MonoBehaviour
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
         }
     }
-
+    
     private void StateHandler()
     {
         
-        if(wallrunning)
+       if(dashing)
+        {
+            state = MovementState.dashing;
+            moveSpeed = dashSpeed;
+        }
+        else if(wallrunning)
         {
             state = MovementState.wallrunning;
             desiredMoveSpeed = wallrunSpeed;
