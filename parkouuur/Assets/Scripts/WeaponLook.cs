@@ -18,7 +18,7 @@ public class WeaponControl : MonoBehaviour
             transform.rotation*= Quaternion.Euler(offset);
         }
         //Fire
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(0))
         {
             Instantiate(bullet, firePoint.position, transform.rotation*Quaternion.Euler(-90,0,0));
 
