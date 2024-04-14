@@ -9,21 +9,12 @@ public class EnemyA1 : ScriptableObject
     public int damage;
     public int cooldown;
     public GameObject model;
-    
+    public float firlatmaGucu = 20f;
+    public GameObject ammo;
 
     
 
-    float timer = 0;
-
-    public void GunCoolDown()
-    {
-        timer += Time.deltaTime;
-        if (timer > cooldown)
-        {
-            Debug.Log("Shoot");
-            timer = 0;
-        }
-    }
+   
 
    
 

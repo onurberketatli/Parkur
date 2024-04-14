@@ -43070,6 +43070,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7468666169528644342, guid: 32d0a52c5174ac542a31fd9231e98dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7770079030681497352, guid: 32d0a52c5174ac542a31fd9231e98dc4,
         type: 3}
       propertyPath: m_Mesh

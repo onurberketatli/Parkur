@@ -5,19 +5,58 @@ using UnityEngine;
 public class EnemyPoint : MonoBehaviour
 {
     public EnemyA1 enemya1;
-    
-    
+    float timer = 0;
+
     void Start()
     {
-
         Instantiate(enemya1.model, transform.position, Quaternion.identity);
-        
     }
 
     // Update is called once per frame
-    private void Update()
+    void Update()
     {
-        enemya1.GunCoolDown();
-        
+        GunCoolDown();
+    }
+
+    public void GunCoolDown()
+    {
+        timer += Time.deltaTime;
+        if (timer > enemya1.cooldown)
+        {
+            Debug.Log("Shoot");
+            timer = 0;
+            Firlat();
+        }
+    }
+
+    void Firlat()
+    {
+        // Fýrlatma noktasý (Player tag'ine sahip obje)
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
+        // Player objesi bulunamazsa iþlemi sonlandýr
+        if (players.Length == 0)
+        {
+            Debug.LogWarning("Player objesi bulunamadý!");
+            return;
+        }
+
+        // Fýrlatma noktasýný belirle
+        Transform firlatmaNoktasi = players[0].transform;
+
+        // Yeni bir obje oluþtur
+        GameObject yeniObj = Instantiate(enemya1.ammo, transform.position, Quaternion.identity);
+
+        // Oluþturulan objeyi fýrlat
+        Rigidbody rb = yeniObj.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            Vector3 firlatmaYonu = (firlatmaNoktasi.position - transform.position).normalized;
+            rb.AddForce(firlatmaYonu * enemya1.firlatmaGucu, ForceMode.Impulse);
+        }
+        else
+        {
+            Debug.LogError("Firlatilan obje Rigidbody bileþeni içermiyor!");
+        }
     }
 }

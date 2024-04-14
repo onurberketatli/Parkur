@@ -15,3 +15,5 @@ MonoBehaviour:
   damage: 1
   cooldown: 1
   model: {fileID: 3817041158671478577, guid: c38ea4339362caa4f9407939bce2d3bd, type: 3}
+  firlatmaGucu: 20
+  ammo: {fileID: 4406308509696349855, guid: f4cb3e8465c3c30489b54dc7565c4ef4, type: 3}
