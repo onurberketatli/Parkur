@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/FirstScene.unity
+- path: Assets/AnimasyonVize.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
