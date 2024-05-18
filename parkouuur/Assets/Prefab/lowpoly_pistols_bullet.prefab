@@ -78,6 +78,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lowpoly_pistols_bullet
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 682d92eb800b8004980aea19877838a8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bullet
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -86,6 +91,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5956870246069706456}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 682d92eb800b8004980aea19877838a8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3125761008195549124}
   m_SourcePrefab: {fileID: 100100000, guid: 682d92eb800b8004980aea19877838a8, type: 3}
 --- !u!1 &547646348337885153 stripped
 GameObject:
@@ -107,3 +116,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   lifetime: 5
+--- !u!65 &3125761008195549124
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547646348337885153}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.00358812, y: 0.00358812, z: 0.005751934}
+  m_Center: {x: 1.1641532e-10, y: -5.820766e-10, z: -0.0005057355}

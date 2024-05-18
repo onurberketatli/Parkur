@@ -6,6 +6,8 @@ public class EnemyPoint : MonoBehaviour
 {
     public EnemyA1 enemya1;
     float timer = 0;
+    float distance;
+    GameObject oyuncu;
 
     void Start()
     {
@@ -15,13 +17,15 @@ public class EnemyPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        oyuncu = GameObject.FindGameObjectWithTag("Player");
+        distance = Vector3.Distance(transform.position, oyuncu.transform.position);
         GunCoolDown();
     }
 
     public void GunCoolDown()
     {
         timer += Time.deltaTime;
-        if (timer > enemya1.cooldown)
+        if (timer > enemya1.cooldown && distance < 40)
         {
             Debug.Log("Shoot");
             timer = 0;
@@ -57,6 +61,16 @@ public class EnemyPoint : MonoBehaviour
         else
         {
             Debug.LogError("Firlatilan obje Rigidbody bileþeni içermiyor!");
+        }
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        GameObject otherObject = collision.gameObject;
+        if (otherObject.CompareTag("Bullet"))
+        {
+            Destroy(this.gameObject);
+            Debug.Log("Enemy öldü");
         }
     }
 }

@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 7090082313394794535}
   - component: {fileID: 7698886147956148793}
   - component: {fileID: 1687034316685675051}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,10 +210,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
+  m_Radius: 0.52422714
+  m_Height: 2.8906217
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.024227142, y: -0.2803915, z: -0.00000011920929}
 --- !u!114 &1687034316685675051
 MonoBehaviour:
   m_ObjectHideFlags: 0

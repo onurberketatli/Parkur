@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ledge
+  - Bullet
+  - enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
   - whatIsPlayer
@@ -29,7 +31,7 @@ TagManager:
   - postProcessing
   - dontRender
   - bloom
-  - 
+  - aa12
   - 
   - 
   - 
