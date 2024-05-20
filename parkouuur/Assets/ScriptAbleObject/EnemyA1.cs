@@ -11,6 +11,7 @@ public class EnemyA1 : ScriptableObject
     public GameObject model;
     public float firlatmaGucu = 20f;
     public GameObject ammo;
+    public Vector3 ammospawnpoint;
 
     
 

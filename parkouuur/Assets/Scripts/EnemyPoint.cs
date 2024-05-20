@@ -12,13 +12,14 @@ public class EnemyPoint : MonoBehaviour
     void Start()
     {
         Instantiate(enemya1.model, transform.position, Quaternion.identity);
+
     }
 
     // Update is called once per frame
     void Update()
     {
         oyuncu = GameObject.FindGameObjectWithTag("Player");
-        distance = Vector3.Distance(transform.position, oyuncu.transform.position);
+        distance = Vector3.Distance(transform.position , oyuncu.transform.position);
         GunCoolDown();
     }
 
