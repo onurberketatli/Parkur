@@ -8,6 +8,7 @@ public class A : MonoBehaviour
     public Camera cam;
     Rigidbody rig;
     bool isDashing;
+    float coolDown;
     void Start()
     {
         rig = GetComponent<Rigidbody>();
@@ -16,9 +17,11 @@ public class A : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+       coolDown -= Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.E) && coolDown < 0)
         {
             isDashing = true;
+            coolDown = 4;
         }
     }
 

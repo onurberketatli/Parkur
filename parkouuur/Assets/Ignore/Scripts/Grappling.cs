@@ -10,6 +10,7 @@ public class Grappling : MonoBehaviour
     public Transform gunTip;
     public LayerMask whatIsGrappleable;
     public LineRenderer lr;
+    public AudioSource graplesound;
 
     [Header("Grappling")]
     public float maxGrappleDistance;
@@ -49,6 +50,7 @@ public class Grappling : MonoBehaviour
     private void StartGrapple()
     {
         if (grapplingCdTimer > 0) return;
+        graplesound.Play();
 
         // deactivate active swinging
         GetComponent<SwingingDone>().StopSwing();

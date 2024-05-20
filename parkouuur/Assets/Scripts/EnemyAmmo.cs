@@ -8,7 +8,7 @@ public class EnemyAmmo : MonoBehaviour
 
     void Awake()
     {
-        //Destroy(gameObject, life);
+        Destroy(gameObject, life);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -18,16 +18,16 @@ public class EnemyAmmo : MonoBehaviour
         {
             print("öldün");
         }
-        //else if (collision.gameObject.CompareTag("enemy"))
-        //{
-        //    print("özölüm");
-        //}
+        else if (collision.gameObject.CompareTag("enemy"))
+        {
+            print("özölüm");
+        }
 
         if (!collision.gameObject.CompareTag("enemy"))
         {
             Destroy(gameObject);
         }
-        
+
         
        
     }

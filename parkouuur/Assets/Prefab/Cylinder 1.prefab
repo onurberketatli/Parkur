@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 10083253439027948}
   - component: {fileID: 1003812050712569290}
   - component: {fileID: 4743005216549471857}
-  - component: {fileID: 1431513480644780713}
+  - component: {fileID: 2277422633700778806}
   m_Layer: 0
   m_Name: Cylinder 1
   m_TagString: Untagged
@@ -214,7 +214,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &1431513480644780713
+--- !u!114 &2277422633700778806
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,7 +223,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9199958941006965235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa6253219bfd5f04e8baecdb9964e7cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c835b420a83db04db621f43859ef68e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyA1: {fileID: 11400000, guid: 0254977c0be2acc4aa98e6420bd1101d, type: 2}
+  damage: 1
+  cooldown: 2
+  model: {fileID: 0}
+  firlatmaGucu: 20
+  ammo: {fileID: 4406308509696349855, guid: f4cb3e8465c3c30489b54dc7565c4ef4, type: 3}
