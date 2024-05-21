@@ -6369,6 +6369,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.0274
       objectReference: {fileID: 0}
+    - target: {fileID: 4072067453339179475, guid: 32d0a52c5174ac542a31fd9231e98dc4,
+        type: 3}
+      propertyPath: dash_effect
+      value: 
+      objectReference: {fileID: 1824357140960365570, guid: e67a2f9f8b57c754d8d07277fdafa142,
+        type: 3}
+    - target: {fileID: 4072067453339179475, guid: 32d0a52c5174ac542a31fd9231e98dc4,
+        type: 3}
+      propertyPath: playertransform
+      value: 
+      objectReference: {fileID: 654965755}
     - target: {fileID: 4181621860132088845, guid: 32d0a52c5174ac542a31fd9231e98dc4,
         type: 3}
       propertyPath: m_Mesh

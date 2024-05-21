@@ -9,6 +9,10 @@ public class A : MonoBehaviour
     Rigidbody rig;
     bool isDashing;
     float coolDown;
+    public GameObject dash_effect;
+    public GameObject playertransform;
+    
+
     void Start()
     {
         rig = GetComponent<Rigidbody>();
@@ -17,7 +21,8 @@ public class A : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       coolDown -= Time.deltaTime;
+        
+        coolDown -= Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.E) && coolDown < 0)
         {
             isDashing = true;
@@ -36,8 +41,12 @@ public class A : MonoBehaviour
     private void Dashing()
     {
         Vector3 camForward = cam.transform.forward;
-        camForward.y = 0f; 
+        camForward.y = 0f;
         rig.AddForce(camForward * dashSpeed, ForceMode.Impulse);
+        GameObject effect = Instantiate(dash_effect,Camera.main.transform.position,dash_effect.transform.rotation);
+        effect.transform.parent=Camera.main.transform;
+        effect.transform.LookAt(transform);
+
         isDashing = false;
     }
 
