@@ -8,6 +8,7 @@ public class EnemyPoint : MonoBehaviour
     float timer = 0;
     float distance;
     GameObject oyuncu;
+    public GameObject enemy_deatheffect;
 
     void Start()
     {
@@ -70,6 +71,7 @@ public class EnemyPoint : MonoBehaviour
         GameObject otherObject = collision.gameObject;
         if (otherObject.CompareTag("Bullet"))
         {
+            Instantiate(enemy_deatheffect, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
             Debug.Log("Enemy öldü");
         }

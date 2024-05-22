@@ -12,6 +12,7 @@ public class EnemyLast : MonoBehaviour
     float timer = 0;
     float distance;
     GameObject oyuncu;
+    
     void Start()
     {
         
@@ -70,7 +71,9 @@ public class EnemyLast : MonoBehaviour
         GameObject otherObject = collision.gameObject;
         if (otherObject.CompareTag("Bullet"))
         {
+           
             Destroy(this.gameObject);
+            
             Debug.Log("Enemy öldü");
         }
     }

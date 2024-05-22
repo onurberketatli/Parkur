@@ -231,3 +231,5 @@ MonoBehaviour:
   model: {fileID: 0}
   firlatmaGucu: 20
   ammo: {fileID: 4406308509696349855, guid: f4cb3e8465c3c30489b54dc7565c4ef4, type: 3}
+  enemy_deatheffect: {fileID: 7493157329660789254, guid: 7f7564baf8c4d184faee1f38cee1f2ec,
+    type: 3}
