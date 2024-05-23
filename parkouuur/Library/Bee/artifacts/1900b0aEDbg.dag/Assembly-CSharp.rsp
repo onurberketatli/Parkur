@@ -465,6 +465,7 @@
 "Assets/Scripts/LookatPlayer.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/OpenMenu.cs"
+"Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/PlayerMovementGrappling.cs"
 "Assets/Scripts/SettingsMenu.cs"
 "Assets/Scripts/Spawner.cs"
