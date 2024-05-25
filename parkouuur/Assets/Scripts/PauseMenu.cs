@@ -31,11 +31,11 @@ public class PauseMenu : MonoBehaviour
     {
         if (!isGamePasued)
         {
-            Paused();
+            Resume();
         }
         else
         {
-            Resume();
+            Paused();
         }
     }
     private void Paused()
