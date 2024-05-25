@@ -26,7 +26,7 @@ public class A : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && coolDown < 0)
         {
             isDashing = true;
-            coolDown = 4;
+            coolDown = 1.25f;
         }
     }
 
