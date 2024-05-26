@@ -12,6 +12,7 @@ public class GunOnur : MonoBehaviour
     public GameObject effect;
     public AudioClip gunshot;
     public AudioSource audioSource;
+    public GameObject shot_effect;
 
     void Update()
     {
@@ -21,6 +22,7 @@ public class GunOnur : MonoBehaviour
             audioSource.Play();
             var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             Instantiate(effect,bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+            Instantiate(shot_effect, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
             cooldown = 1;
         }

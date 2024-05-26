@@ -11,7 +11,7 @@ public class A : MonoBehaviour
     float coolDown;
     public GameObject dash_effect;
     public GameObject playertransform;
-    
+    public AudioClip dash_sound;
 
     void Start()
     {
@@ -43,6 +43,7 @@ public class A : MonoBehaviour
         Vector3 camForward = cam.transform.forward;
         camForward.y = 0f;
         rig.AddForce(camForward * dashSpeed, ForceMode.Impulse);
+        GetComponent<AudioSource>().PlayOneShot(dash_sound);    
         GameObject effect = Instantiate(dash_effect,Camera.main.transform.position,dash_effect.transform.rotation);
         effect.transform.parent=Camera.main.transform;
         effect.transform.LookAt(transform);

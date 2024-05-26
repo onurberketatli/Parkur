@@ -9,6 +9,7 @@ public class EnemyPoint : MonoBehaviour
     float distance;
     GameObject oyuncu;
     public GameObject enemy_deatheffect;
+    public AudioClip enemy_explosion;
 
     void Start()
     {
@@ -71,6 +72,7 @@ public class EnemyPoint : MonoBehaviour
         GameObject otherObject = collision.gameObject;
         if (otherObject.CompareTag("Bullet"))
         {
+            GetComponent<AudioSource>().PlayOneShot(enemy_explosion);
             Instantiate(enemy_deatheffect, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
             Debug.Log("Enemy öldü");
